@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f6f6fb;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #1f1b35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbar discreto */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9d7e8;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .ef-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .ef-btn-primary {
+    @apply ef-btn bg-brand-600 text-white shadow-lift hover:bg-brand-700;
+  }
+  .ef-btn-secondary {
+    @apply ef-btn bg-white text-brand-700 border border-brand-100 hover:border-brand-300 hover:bg-brand-50;
+  }
+  .ef-btn-ghost {
+    @apply ef-btn text-slate-600 hover:bg-slate-100;
+  }
+  .ef-btn-coral {
+    @apply ef-btn bg-coral-500 text-white hover:bg-coral-600 shadow-[0_8px_24px_-8px_rgba(255,107,61,0.5)];
+  }
+  .ef-card {
+    @apply rounded-2xl bg-white shadow-card border border-slate-100;
+  }
+  .ef-input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-400 focus:ring-4 focus:ring-brand-100 placeholder:text-slate-400;
+  }
+  .ef-label {
+    @apply block text-sm font-semibold text-slate-700 mb-1.5;
+  }
+}
+
+@keyframes ef-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ef-animate {
+  animation: ef-fade-up 0.35s ease both;
+}
