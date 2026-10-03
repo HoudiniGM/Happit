@@ -59,7 +59,7 @@ function Logo({ compact = false }: { compact?: boolean }) {
       </div>
       {!compact && (
         <span className="text-lg font-extrabold tracking-tight text-slate-900">
-          Evento<span className="text-brand-600">Fácil</span>
+          Happ<span className="text-brand-600">it</span>
         </span>
       )}
     </div>

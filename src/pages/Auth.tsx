@@ -45,7 +45,7 @@ export default function Auth({ modo }: { modo: 'login' | 'cadastro' }) {
           <IconCalendar width={20} height={20} />
         </div>
         <span className="text-lg font-extrabold tracking-tight">
-          Evento<span className="text-brand-600">Fácil</span>
+          Happ<span className="text-brand-600">it</span>
         </span>
       </div>
 
@@ -55,7 +55,7 @@ export default function Auth({ modo }: { modo: 'login' | 'cadastro' }) {
       <p className="mt-1 text-sm text-slate-500">
         {ehCadastro
           ? 'Escolha como você quer usar a plataforma.'
-          : 'Bem-vindo de volta ao EventoFácil.'}
+          : 'Bem-vindo de volta ao Happit.'}
       </p>
 
       {/* Escolha de perfil */}
@@ -144,7 +144,7 @@ export default function Auth({ modo }: { modo: 'login' | 'cadastro' }) {
           </h2>
           <p className="mt-4 max-w-sm text-sm text-brand-100">
             Checklist, orçamento, fornecedores, pagamentos e convidados — o
-            EventoFácil coordena cada detalhe do seu evento.
+            Happit coordena cada detalhe do seu evento.
           </p>
           <div className="mt-8 space-y-3">
             {[

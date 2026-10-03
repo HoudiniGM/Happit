@@ -63,7 +63,7 @@ export default function Home() {
               <IconCalendar width={20} height={20} />
             </div>
             <span className="text-lg font-extrabold tracking-tight">
-              Evento<span className="text-brand-600">Fácil</span>
+              Happ<span className="text-brand-600">it</span>
             </span>
           </div>
 
@@ -92,7 +92,7 @@ export default function Home() {
             Encontrar fornecedor é fácil. Coordenar tudo é o problema.
           </p>
           <p className="mt-1 text-xs text-brand-100">
-            O EventoFácil é o sistema operacional do seu evento: checklist,
+            O Happit é o sistema operacional do seu evento: checklist,
             orçamento, fornecedores, pagamentos e convidados em um só lugar.
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function Home() {
             <IconCalendar width={20} height={20} />
           </div>
           <span className="text-lg font-extrabold tracking-tight">
-            Evento<span className="text-brand-600">Fácil</span>
+            Happ<span className="text-brand-600">it</span>
           </span>
         </div>
         <nav className="flex items-center gap-6 text-sm font-semibold text-slate-500">
@@ -175,7 +175,7 @@ export default function Home() {
             Encontrar fornecedor é fácil. Coordenar tudo é o problema.
           </h3>
           <p className="mt-2 text-sm text-brand-100">
-            O EventoFácil é o sistema operacional do seu evento: checklist
+            O Happit é o sistema operacional do seu evento: checklist
             inteligente, orçamento, fornecedores, pagamentos intermediados e
             convidados — tudo em um só lugar.
           </p>

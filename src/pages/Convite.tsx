@@ -183,7 +183,7 @@ export default function Convite() {
           )}
 
           <p className="mt-6 text-center text-xs text-slate-400">
-            Enviado via EventoFácil · você não precisa criar conta
+            Enviado via Happit · você não precisa criar conta
           </p>
         </div>
       </div>

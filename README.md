@@ -1,4 +1,4 @@
-# EventoFácil — Protótipo interativo
+# Happit — Protótipo interativo
 
 > **Você organiza o evento. Nós cuidamos para que nada seja esquecido.**
 

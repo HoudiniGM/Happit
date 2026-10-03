@@ -1,4 +1,4 @@
-// Dados fictícios da plataforma EventoFácil.
+// Dados fictícios da plataforma Happit.
 // Datas em dd/mm, valores em R$. Nenhum backend real.
 
 export type FornecedorStatus = 'Confirmado' | 'Aguardando' | 'Procurando';
