@@ -57,7 +57,7 @@ export default function Convite() {
   return (
     <PublicShell>
       <div className="flex min-h-full flex-col bg-gradient-to-b from-brand-50 via-orange-50/40 to-white">
-        <div className="px-5 pt-5">
+        <div className="px-5 pt-[max(3.25rem,env(safe-area-inset-top))] sm:pt-5">
           <button
             onClick={() => navigate('/convidados')}
             className="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-slate-700"

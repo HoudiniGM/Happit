@@ -14,14 +14,16 @@ export function PublicShell({
   if (mode === 'app') {
     return (
       <MobileFrame>
-        <div className="flex h-full flex-col overflow-y-auto">{children}</div>
+        <div className="@container flex h-full flex-col overflow-y-auto">
+          {children}
+        </div>
       </MobileFrame>
     );
   }
   return (
     <DesktopFrame>
       <div
-        className={`h-[720px] overflow-y-auto bg-white ${
+        className={`@container h-[720px] overflow-y-auto bg-white ${
           desktopFull ? '' : 'px-0'
         }`}
       >

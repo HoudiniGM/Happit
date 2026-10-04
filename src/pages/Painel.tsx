@@ -72,7 +72,7 @@ export default function Painel() {
         </section>
 
         {/* Cartões de resumo */}
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 @2xl:grid-cols-4">
           <StatCard
             label="Orçamento"
             value={formatBRL(carteira.orcamento)}
@@ -127,7 +127,7 @@ export default function Painel() {
           </div>
         </section>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 @3xl:grid-cols-2">
           {/* Fornecedores */}
           <section>
             <SectionTitle

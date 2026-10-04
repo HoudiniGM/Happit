@@ -89,7 +89,7 @@ export default function Convidados() {
               Este resumo consolidado é enviado automaticamente ao Buffet Y para
               preparar o cardápio ({r.total} convidados).
             </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 @xl:grid-cols-4">
               {restricoes.map((x) => (
                 <div
                   key={x.label}

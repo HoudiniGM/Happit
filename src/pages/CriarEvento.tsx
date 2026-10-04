@@ -111,7 +111,7 @@ export default function CriarEvento() {
               <p className="mb-4 text-sm text-slate-500">
                 Vamos montar o plano certo para ele.
               </p>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 @xl:grid-cols-3">
                 {TIPOS.map((t) => (
                   <button
                     key={t.id}
@@ -138,7 +138,7 @@ export default function CriarEvento() {
               <h2 className="text-base font-bold text-slate-800">
                 Quando e onde vai ser?
               </h2>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 @md:grid-cols-2">
                 <div>
                   <label className="ef-label">Data (dd/mm)</label>
                   <input

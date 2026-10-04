@@ -48,7 +48,7 @@ export default function Carteira() {
         </div>
 
         {/* Resumo */}
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 @2xl:grid-cols-4">
           <StatCard
             label="Orçamento"
             value={formatBRL(carteira.orcamento)}

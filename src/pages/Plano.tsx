@@ -43,7 +43,7 @@ export default function Plano() {
           </p>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 @3xl:grid-cols-2">
           {/* Checklist inteligente */}
           <section>
             <SectionTitle

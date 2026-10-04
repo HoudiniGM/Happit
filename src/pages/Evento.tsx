@@ -107,7 +107,7 @@ export default function Evento() {
           >
             Fornecedores do evento
           </SectionTitle>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 @xl:grid-cols-2">
             {fornecedores.map((f) => (
               <div key={f.id} className="ef-card p-4">
                 <div className="flex items-center justify-between">
@@ -151,7 +151,7 @@ export default function Evento() {
         {/* Orçamento por categoria (resumo) */}
         <section>
           <SectionTitle>Orçamento por categoria</SectionTitle>
-          <div className="ef-card grid grid-cols-2 gap-px overflow-hidden bg-slate-100 sm:grid-cols-4">
+          <div className="ef-card grid grid-cols-2 gap-px overflow-hidden bg-slate-100 @2xl:grid-cols-4">
             {categorias.map((c) => (
               <div key={c.id} className="bg-white p-4">
                 <p className="text-xs text-slate-400">

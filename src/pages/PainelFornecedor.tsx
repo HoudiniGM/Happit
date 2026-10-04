@@ -57,14 +57,14 @@ export default function PainelFornecedor() {
         </section>
 
         {/* Métricas */}
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 @2xl:grid-cols-4">
           <StatCard label="Pedidos novos" value="2" accent="coral" />
           <StatCard label="Eventos na agenda" value={String(AGENDA.length)} accent="brand" />
           <StatCard label="A receber" value={formatBRL(totalReceber)} accent="green" />
           <StatCard label="No prazo" value={`${f.percentualNoPrazo}%`} accent="green" />
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 @3xl:grid-cols-2">
           {/* Pedidos recebidos */}
           <section>
             <SectionTitle>Pedidos recebidos</SectionTitle>
@@ -160,7 +160,7 @@ export default function PainelFornecedor() {
           >
             Resumo da reputação
           </SectionTitle>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 @2xl:grid-cols-4">
             <StatCard label="Nota" value={f.nota.toFixed(1).replace('.', ',')} accent="amber" />
             <StatCard label="Avaliações" value={String(f.avaliacoes)} accent="slate" />
             <StatCard label="Concluídos" value={`${f.percentualConcluidos}%`} accent="green" />

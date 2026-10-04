@@ -13,7 +13,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const ComoFunciona = (
-    <div className="grid gap-3 md:grid-cols-4">
+    <div className="grid gap-3 @2xl:grid-cols-4">
       {PASSOS_COMO_FUNCIONA.map((p) => (
         <div
           key={p.numero}
@@ -37,7 +37,7 @@ export default function Home() {
   );
 
   const CTAs = (
-    <div className="flex flex-col gap-2.5 sm:flex-row">
+    <div className="flex flex-col gap-2.5 @md:flex-row">
       <button
         onClick={() => navigate('/cadastro?perfil=Organizador')}
         className="ef-btn-primary flex-1"
@@ -57,7 +57,7 @@ export default function Home() {
   if (mode === 'app') {
     return (
       <PublicShell>
-        <div className="flex flex-col gap-6 bg-gradient-to-b from-brand-50 to-white px-5 pb-8 pt-10">
+        <div className="flex flex-col gap-6 bg-gradient-to-b from-brand-50 to-white px-5 pb-8 pt-[max(3.5rem,env(safe-area-inset-top))] sm:pt-10">
           <div className="flex items-center gap-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white shadow-lift">
               <IconCalendar width={20} height={20} />

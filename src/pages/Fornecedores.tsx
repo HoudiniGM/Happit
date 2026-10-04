@@ -131,7 +131,7 @@ export default function Fornecedores() {
         </div>
 
         {/* Cards de propostas */}
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 @2xl:grid-cols-3">
           {propostas.map((p) => {
             const melhor = p.destaque === 'melhor-combinacao';
             return (

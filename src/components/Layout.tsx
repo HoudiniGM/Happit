@@ -82,16 +82,25 @@ export function AppShell({ children }: { children: ReactNode }) {
   );
 }
 
-/* ---------------- Moldura celular ---------------- */
+/* ---------------- Moldura celular ----------------
+   Em telas pequenas (celular real) o app ocupa a tela inteira, sem moldura.
+   A partir de `sm` (desktop demonstrando o app) mostramos a moldura de celular. */
 export function MobileFrame({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-start gap-4 bg-gradient-to-b from-slate-100 to-slate-200 px-4 py-6">
-      <DeviceSwitch />
-      <div className="relative h-[760px] w-[380px] max-w-full overflow-hidden rounded-[2.5rem] border-[10px] border-slate-900 bg-white shadow-2xl">
-        <div className="absolute left-1/2 top-0 z-20 h-5 w-32 -translate-x-1/2 rounded-b-2xl bg-slate-900" />
+    <div className="flex min-h-[100dvh] flex-col items-center justify-start bg-gradient-to-b from-slate-100 to-slate-200 sm:gap-4 sm:px-4 sm:py-6">
+      {/* Alternador: flutua no mobile para não roubar espaço; estático no desktop */}
+      <div className="fixed left-1/2 top-3 z-50 -translate-x-1/2 sm:static sm:translate-x-0">
+        <DeviceSwitch />
+      </div>
+
+      {/* No mobile: tela cheia. No desktop: moldura de celular. */}
+      <div className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-white sm:h-[760px] sm:w-[380px] sm:max-w-full sm:rounded-[2.5rem] sm:border-[10px] sm:border-slate-900 sm:shadow-2xl">
+        {/* Notch apenas na moldura desktop */}
+        <div className="absolute left-1/2 top-0 z-20 hidden h-5 w-32 -translate-x-1/2 rounded-b-2xl bg-slate-900 sm:block" />
         <div className="flex h-full flex-col">{children}</div>
       </div>
-      <p className="text-xs text-slate-400">Versão APP · mobile</p>
+
+      <p className="hidden text-xs text-slate-400 sm:block">Versão APP · mobile</p>
     </div>
   );
 }
@@ -126,8 +135,8 @@ function MobileChrome({ children }: { children: ReactNode }) {
 
   return (
     <>
-      {/* Topo */}
-      <header className="flex items-center justify-between border-b border-slate-100 px-4 pb-3 pt-7">
+      {/* Topo — deixa espaço para o alternador flutuante no mobile e safe-area */}
+      <header className="flex items-center justify-between border-b border-slate-100 px-4 pb-3 pt-[max(3.25rem,env(safe-area-inset-top))] sm:pt-7">
         <div>
           <p className="text-[11px] font-medium text-slate-400">{title}</p>
           <p className="text-sm font-bold text-slate-900">{evento.nome}</p>
@@ -155,13 +164,13 @@ function MobileChrome({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      {/* Conteúdo */}
-      <main className="flex-1 overflow-y-auto bg-slate-50 px-4 py-4">
+      {/* Conteúdo — container query: layout reage à largura real, não à viewport */}
+      <main className="@container flex-1 overflow-y-auto bg-slate-50 px-4 py-4">
         {children}
       </main>
 
-      {/* Barra inferior */}
-      <nav className="grid grid-cols-5 border-t border-slate-100 bg-white px-1 pb-1 pt-1">
+      {/* Barra inferior — respeita a safe-area (home indicator do iOS) */}
+      <nav className="grid grid-cols-5 border-t border-slate-100 bg-white px-1 pt-1 pb-[max(0.25rem,env(safe-area-inset-bottom))]">
         {NAV.map(({ to, label, icon: Icon }) => (
           <NavLink
             key={to}
@@ -277,7 +286,7 @@ function DesktopChrome({ children }: { children: ReactNode }) {
           </div>
         </header>
 
-        <main className="flex-1 overflow-y-auto p-6">{children}</main>
+        <main className="@container flex-1 overflow-y-auto p-6">{children}</main>
       </div>
     </div>
   );

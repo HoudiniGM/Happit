@@ -95,7 +95,7 @@ export default function PerfilFornecedor() {
           <h2 className="mb-3 text-base font-bold text-slate-800">
             Reputação
           </h2>
-          <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+          <div className="grid grid-cols-3 gap-3 @2xl:grid-cols-6">
             {metricas.map((m) => (
               <div
                 key={m.label}

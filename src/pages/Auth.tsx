@@ -127,7 +127,9 @@ export default function Auth({ modo }: { modo: 'login' | 'cadastro' }) {
   if (mode === 'app') {
     return (
       <PublicShell>
-        <div className="flex-1 px-5 py-8">{conteudo}</div>
+        <div className="flex-1 px-5 pb-8 pt-[max(3.5rem,env(safe-area-inset-top))] sm:pt-8">
+          {conteudo}
+        </div>
       </PublicShell>
     );
   }
